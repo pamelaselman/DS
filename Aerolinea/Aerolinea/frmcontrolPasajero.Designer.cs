@@ -52,6 +52,8 @@
             this.txtNomPasajero = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbmodificarPasajero = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grdPasajeros = new System.Windows.Forms.DataGridView();
@@ -66,8 +68,10 @@
             this.btnGuardarPasajero = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cmbmodificarPasajero = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbeliminarPasajero = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbestadoPasajero = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -91,6 +95,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbestadoPasajero);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.dtpasajero);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtdpiPasajero);
@@ -113,7 +119,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(694, 213);
+            this.groupBox1.Size = new System.Drawing.Size(694, 231);
             this.groupBox1.TabIndex = 169;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Pasajero";
@@ -291,6 +297,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmbeliminarPasajero);
+            this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.cmbmodificarPasajero);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.tabControl1);
@@ -302,6 +310,26 @@
             this.groupBox2.TabIndex = 170;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consulta Pasajero (Por Código o Pasaporte)";
+            // 
+            // cmbmodificarPasajero
+            // 
+            this.cmbmodificarPasajero.FormattingEnabled = true;
+            this.cmbmodificarPasajero.Location = new System.Drawing.Point(619, 21);
+            this.cmbmodificarPasajero.Name = "cmbmodificarPasajero";
+            this.cmbmodificarPasajero.Size = new System.Drawing.Size(257, 21);
+            this.cmbmodificarPasajero.TabIndex = 173;
+            this.cmbmodificarPasajero.Text = "Seleccione Código a Modificar";
+            this.cmbmodificarPasajero.SelectedIndexChanged += new System.EventHandler(this.cmbmodificarPasajero_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(539, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 19);
+            this.label12.TabIndex = 172;
+            this.label12.Text = "Modificar:";
             // 
             // tabControl1
             // 
@@ -417,6 +445,7 @@
             this.btnModificarPasajero.Text = "Modificar";
             this.btnModificarPasajero.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificarPasajero.UseVisualStyleBackColor = true;
+            this.btnModificarPasajero.Click += new System.EventHandler(this.btnModificarPasajero_Click);
             // 
             // btnGuardarPasajero
             // 
@@ -451,24 +480,47 @@
             this.mENUToolStripMenuItem.Text = "MENU";
             this.mENUToolStripMenuItem.Click += new System.EventHandler(this.mENUToolStripMenuItem_Click);
             // 
-            // label12
+            // label13
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(539, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 19);
-            this.label12.TabIndex = 172;
-            this.label12.Text = "Modificar:";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(539, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 19);
+            this.label13.TabIndex = 174;
+            this.label13.Text = "Eliminar:";
             // 
-            // cmbmodificarPasajero
+            // cmbeliminarPasajero
             // 
-            this.cmbmodificarPasajero.FormattingEnabled = true;
-            this.cmbmodificarPasajero.Location = new System.Drawing.Point(619, 21);
-            this.cmbmodificarPasajero.Name = "cmbmodificarPasajero";
-            this.cmbmodificarPasajero.Size = new System.Drawing.Size(257, 21);
-            this.cmbmodificarPasajero.TabIndex = 173;
-            this.cmbmodificarPasajero.SelectedIndexChanged += new System.EventHandler(this.cmbmodificarPasajero_SelectedIndexChanged);
+            this.cmbeliminarPasajero.FormattingEnabled = true;
+            this.cmbeliminarPasajero.Location = new System.Drawing.Point(619, 46);
+            this.cmbeliminarPasajero.Name = "cmbeliminarPasajero";
+            this.cmbeliminarPasajero.Size = new System.Drawing.Size(257, 21);
+            this.cmbeliminarPasajero.TabIndex = 174;
+            this.cmbeliminarPasajero.Text = "Seleccione Código a Eliminar";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(300, 209);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 19);
+            this.label14.TabIndex = 187;
+            this.label14.Text = "Estado:";
+            this.label14.Visible = false;
+            // 
+            // cmbestadoPasajero
+            // 
+            this.cmbestadoPasajero.FormattingEnabled = true;
+            this.cmbestadoPasajero.Items.AddRange(new object[] {
+            "ACTIVO",
+            "INACTIVO"});
+            this.cmbestadoPasajero.Location = new System.Drawing.Point(431, 207);
+            this.cmbestadoPasajero.Name = "cmbestadoPasajero";
+            this.cmbestadoPasajero.Size = new System.Drawing.Size(244, 21);
+            this.cmbestadoPasajero.TabIndex = 188;
+            this.cmbestadoPasajero.Visible = false;
             // 
             // frmcontrolPasajero
             // 
@@ -550,6 +602,10 @@
         private System.Windows.Forms.DataGridView grdtelefonoPasajero;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmbmodificarPasajero;
+        private System.Windows.Forms.ComboBox cmbeliminarPasajero;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbestadoPasajero;
+        private System.Windows.Forms.Label label14;
 
     }
 }

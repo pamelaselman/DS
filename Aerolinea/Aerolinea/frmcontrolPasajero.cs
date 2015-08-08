@@ -27,16 +27,34 @@ namespace Aerolinea
 
         private void ingresoPasajero_Load(object sender, EventArgs e)
         {
+            label14.Visible = false;
+            cmbestadoPasajero.Visible = false;
             funconsultarPasajeros();
            
             funllenarComboModificarPasajero();
+            funllenarComboEliminarPasajero();
 
+        }
 
+        private void funllenarComboEliminarPasajero()
+        {
+            using (clasconexion.funobtenerConexion())
+            {
+                string squery = "SELECT ncodpasajero  FROM aerolinea.MaPASAJERO where vestado='ACTIVO'";
+                MySqlCommand cmdc = new MySqlCommand(squery, clasconexion.funobtenerConexion());
+                DataTable dtDatos = new DataTable();
+                MySqlDataAdapter mdaDatos = new MySqlDataAdapter(squery, clasconexion.funobtenerConexion());
+                mdaDatos.Fill(dtDatos);
+                cmbeliminarPasajero.ValueMember = "ncodpasajero";
+                cmbeliminarPasajero.DisplayMember = "ncodpasajero";
+                cmbeliminarPasajero.DataSource = dtDatos;
+                clasconexion.funobtenerConexion().Close();
+            }
         }
 
         private void funllenarComboModificarPasajero()
         {
-            cmbmodificarPasajero.Items.Add("Seleccione Código");
+            //cmbmodificarPasajero.Items.Add("Seleccione Código");
             using (clasconexion.funobtenerConexion())
             {
                 string squery = "SELECT ncodpasajero  FROM aerolinea.MaPASAJERO";
@@ -49,14 +67,6 @@ namespace Aerolinea
                 cmbmodificarPasajero.DisplayMember = "ncodpasajero";
                 cmbmodificarPasajero.DataSource = dtDatos;
                 clasconexion.funobtenerConexion().Close();
-
-
-               
-
-
-
-
-
             }
         }
 
@@ -157,10 +167,29 @@ namespace Aerolinea
         private void btnEliminarPasajero_Click(object sender, EventArgs e)
         {
             funeliminarPasajero();
+            funllenarComboEliminarPasajero();
         }
 
         private void funeliminarPasajero()
         {
+            using (clasconexion.funobtenerConexion())
+            {
+                try { 
+                string sfechaNacimiento = dtpasajero.Value.ToShortDateString();
+                //MessageBox.Show(sfechaNacimiento);
+                string seliminarPasajero = "UPDATE aerolinea.MaPASAJERO  set vestado = 'INACTIVO' where ncodpasajero=" + cmbeliminarPasajero.Text ;
+                MySqlCommand cmd2 = new MySqlCommand(seliminarPasajero, clasconexion.funobtenerConexion());
+                cmd2.ExecuteNonQuery();
+                clasconexion.funobtenerConexion().Close();
+               
+                funconsultarPasajeros();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            
             
         }
 
@@ -179,7 +208,8 @@ namespace Aerolinea
         private void cmbmodificarPasajero_SelectedIndexChanged(object sender, EventArgs e)
         {
             funbuscarPasajeroAModificar();
-
+            label14.Visible = true;
+            cmbestadoPasajero.Visible = true;
         }
 
         private void funbuscarPasajeroAModificar()
@@ -199,12 +229,25 @@ namespace Aerolinea
                     txtdpiPasajero.Text =  Convert.ToString(drdr["vdpi"]);
                     //dtpasajero.Text =  Convert.ToString(drdr["dfechanacimiento"]);
                     txtnoPasaporte.Text=  Convert.ToString(drdr["vnopasaporte"]);
+                    cmbestadoPasajero.Text = Convert.ToString(drdr["vestado"]);
                 }
                 
                 clasconexion.funobtenerConexion().Close();
 
 
             }
+        }
+
+        private void btnModificarPasajero_Click(object sender, EventArgs e)
+        {
+            funmodificarPasajero();
+            label14.Visible = false;
+            cmbestadoPasajero.Visible = false;
+        }
+
+        private void funmodificarPasajero()
+        {
+            
         }
     }
 }
