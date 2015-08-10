@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmcontrolPasajero));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbestadoPasajero = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.dtpasajero = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.txtdpiPasajero = new System.Windows.Forms.MaskedTextBox();
@@ -52,7 +54,8 @@
             this.txtNomPasajero = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmbmodificarPasajero = new System.Windows.Forms.ComboBox();
+            this.cmbeliminarPasajero = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -68,10 +71,7 @@
             this.btnGuardarPasajero = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cmbeliminarPasajero = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.cmbestadoPasajero = new System.Windows.Forms.ComboBox();
+            this.lstmodificoPasajero = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -87,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(295, 20);
+            this.label1.Location = new System.Drawing.Point(340, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 23);
             this.label1.TabIndex = 127;
@@ -124,6 +124,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Pasajero";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cmbestadoPasajero
+            // 
+            this.cmbestadoPasajero.FormattingEnabled = true;
+            this.cmbestadoPasajero.Items.AddRange(new object[] {
+            "ACTIVO",
+            "INACTIVO"});
+            this.cmbestadoPasajero.Location = new System.Drawing.Point(431, 207);
+            this.cmbestadoPasajero.Name = "cmbestadoPasajero";
+            this.cmbestadoPasajero.Size = new System.Drawing.Size(244, 21);
+            this.cmbestadoPasajero.TabIndex = 188;
+            this.cmbestadoPasajero.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(300, 209);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 19);
+            this.label14.TabIndex = 187;
+            this.label14.Text = "Estado:";
+            this.label14.Visible = false;
             // 
             // dtpasajero
             // 
@@ -297,9 +320,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lstmodificoPasajero);
             this.groupBox2.Controls.Add(this.cmbeliminarPasajero);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.cmbmodificarPasajero);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.tabControl1);
             this.groupBox2.Controls.Add(this.txtBusquedaPasajero);
@@ -311,21 +334,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consulta Pasajero (Por Código o Pasaporte)";
             // 
-            // cmbmodificarPasajero
+            // cmbeliminarPasajero
             // 
-            this.cmbmodificarPasajero.FormattingEnabled = true;
-            this.cmbmodificarPasajero.Location = new System.Drawing.Point(619, 21);
-            this.cmbmodificarPasajero.Name = "cmbmodificarPasajero";
-            this.cmbmodificarPasajero.Size = new System.Drawing.Size(257, 21);
-            this.cmbmodificarPasajero.TabIndex = 173;
-            this.cmbmodificarPasajero.Text = "Seleccione Código a Modificar";
-            this.cmbmodificarPasajero.SelectedIndexChanged += new System.EventHandler(this.cmbmodificarPasajero_SelectedIndexChanged);
+            this.cmbeliminarPasajero.FormattingEnabled = true;
+            this.cmbeliminarPasajero.Location = new System.Drawing.Point(619, 46);
+            this.cmbeliminarPasajero.Name = "cmbeliminarPasajero";
+            this.cmbeliminarPasajero.Size = new System.Drawing.Size(257, 21);
+            this.cmbeliminarPasajero.TabIndex = 174;
+            this.cmbeliminarPasajero.Text = "Seleccione Código a Eliminar";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(539, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 19);
+            this.label13.TabIndex = 174;
+            this.label13.Text = "Eliminar:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(539, 20);
+            this.label12.Location = new System.Drawing.Point(539, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 19);
             this.label12.TabIndex = 172;
@@ -480,53 +512,20 @@
             this.mENUToolStripMenuItem.Text = "MENU";
             this.mENUToolStripMenuItem.Click += new System.EventHandler(this.mENUToolStripMenuItem_Click);
             // 
-            // label13
+            // lstmodificoPasajero
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(539, 45);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 19);
-            this.label13.TabIndex = 174;
-            this.label13.Text = "Eliminar:";
-            // 
-            // cmbeliminarPasajero
-            // 
-            this.cmbeliminarPasajero.FormattingEnabled = true;
-            this.cmbeliminarPasajero.Location = new System.Drawing.Point(619, 46);
-            this.cmbeliminarPasajero.Name = "cmbeliminarPasajero";
-            this.cmbeliminarPasajero.Size = new System.Drawing.Size(257, 21);
-            this.cmbeliminarPasajero.TabIndex = 174;
-            this.cmbeliminarPasajero.Text = "Seleccione Código a Eliminar";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(300, 209);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 19);
-            this.label14.TabIndex = 187;
-            this.label14.Text = "Estado:";
-            this.label14.Visible = false;
-            // 
-            // cmbestadoPasajero
-            // 
-            this.cmbestadoPasajero.FormattingEnabled = true;
-            this.cmbestadoPasajero.Items.AddRange(new object[] {
-            "ACTIVO",
-            "INACTIVO"});
-            this.cmbestadoPasajero.Location = new System.Drawing.Point(431, 207);
-            this.cmbestadoPasajero.Name = "cmbestadoPasajero";
-            this.cmbestadoPasajero.Size = new System.Drawing.Size(244, 21);
-            this.cmbestadoPasajero.TabIndex = 188;
-            this.cmbestadoPasajero.Visible = false;
+            this.lstmodificoPasajero.FormattingEnabled = true;
+            this.lstmodificoPasajero.Location = new System.Drawing.Point(619, 6);
+            this.lstmodificoPasajero.Name = "lstmodificoPasajero";
+            this.lstmodificoPasajero.Size = new System.Drawing.Size(257, 30);
+            this.lstmodificoPasajero.TabIndex = 175;
+            this.lstmodificoPasajero.SelectedIndexChanged += new System.EventHandler(this.lstmodificoPasajero_SelectedIndexChanged);
             // 
             // frmcontrolPasajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(914, 543);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -601,11 +600,11 @@
         private System.Windows.Forms.DataGridView grdcorreoPasajero;
         private System.Windows.Forms.DataGridView grdtelefonoPasajero;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cmbmodificarPasajero;
         private System.Windows.Forms.ComboBox cmbeliminarPasajero;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cmbestadoPasajero;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ListBox lstmodificoPasajero;
 
     }
 }
