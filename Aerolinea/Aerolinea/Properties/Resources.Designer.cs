@@ -63,6 +63,16 @@ namespace Aerolinea.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1439252944_aeroplane {
+            get {
+                object obj = ResourceManager.GetObject("1439252944_aeroplane", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _16__User_ {
             get {
                 object obj = ResourceManager.GetObject("16 (User)", resourceCulture);
@@ -136,6 +146,16 @@ namespace Aerolinea.Properties {
         internal static System.Drawing.Bitmap anterior {
             get {
                 object obj = ResourceManager.GetObject("anterior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anterior1 {
+            get {
+                object obj = ResourceManager.GetObject("anterior1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

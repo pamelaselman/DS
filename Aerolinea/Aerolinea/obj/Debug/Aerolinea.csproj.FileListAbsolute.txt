@@ -16,8 +16,11 @@ C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\bin
 C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\bin\Debug\Aerolinea.pdb
 C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.Properties.Resources.resources
 C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.Login.resources
-C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.Menu.resources
-C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.ingresoReservacion.resources
-C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.realizacionPago.resources
-C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.agregarVuelo.resources
 C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmcontrolPasajero.resources
+C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmMenu.resources
+C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmrealizacionPago.resources
+C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmcontrolVuelo.resources
+C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmcontrolAvion.resources
+C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmcontrolLocalizaciones.resources
+C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmingresoReservacion.resources
+C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmseleccionReservacion.resources

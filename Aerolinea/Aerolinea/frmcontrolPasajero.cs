@@ -235,7 +235,7 @@ namespace Aerolinea
 
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Menu mn = new Menu();
+            frmMenu mn = new frmMenu();
             mn.Show();
             this.Hide();
         }
@@ -255,7 +255,7 @@ namespace Aerolinea
         {
             using (clasconexion.funobtenerConexion())
             {
-                string squery = "SELECT ncodpasajero as CodigoPasajero,vnompasajero as NombrePasajero,vapepasajero as ApellidoPasajero,vdireccion as DireccionPasajero,nedadpasajero as EdadPasajero,vdpi as DPI, DATE_FORMAT(dfechanacimiento, '%d-%m-%Y') as FechaNacimiento, vnopasaporte as PasaportePasajero,vestado as EstadoPasajero FROM aerolinea.MaPASAJERO  where ncodpasajero=" + lstmodificoPasajero.SelectedItem.ToString();
+                string squery = "SELECT ncodpasajero as CodigoPasajero,vnompasajero as NombrePasajero,vapepasajero as ApellidoPasajero,vdireccion as DireccionPasajero,nedadpasajero as EdadPasajero,vdpi as DPI, DATE_FORMAT(dfechanacimiento, '%Y-%m-%d') as FechaNacimiento, vnopasaporte as PasaportePasajero,vestado as EstadoPasajero FROM aerolinea.MaPASAJERO  where ncodpasajero=" + lstmodificoPasajero.SelectedItem.ToString();
                 MySqlCommand cmdc = new MySqlCommand(squery, clasconexion.funobtenerConexion());
                 DataTable dtdatosPasajero = new DataTable();
                 MySqlDataAdapter mdadatosPasajero = new MySqlDataAdapter(squery, clasconexion.funobtenerConexion());
