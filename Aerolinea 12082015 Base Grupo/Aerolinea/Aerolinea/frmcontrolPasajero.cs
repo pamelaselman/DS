@@ -133,18 +133,15 @@ namespace Aerolinea
                     MyReader = cmd2.ExecuteReader();  
                     MessageBox.Show("PASAJERO ALMACENADO");
 
-                    if (!string.IsNullOrWhiteSpace(lstTelefonoPasajero.Text))
-                    {
-                        string sinsertartelefono1 = "INSERT INTO aerolinea.TrTELEFONO (ncodpasajero,ntelefono)values(" + icodigoPasajero + ",@telefono);";
-                        MySqlCommand cmd3 = new MySqlCommand(sinsertartelefono1, clasconexion.funobtenerConexion());
-                        foreach (string item in lstTelefonoPasajero.Items)
-                             {
-                                 cmd3.Parameters.Clear();
-                                 cmd3.Parameters.AddWithValue("@telefono", item);
-                                 cmd3.ExecuteNonQuery();
-                              }
+                     
                         
-                    }
+                          for (int itelefono=0; itelefono < icontadorTelefonosPasajeros; itelefono++) {
+                           string sinsertartelefono1 = "INSERT INTO aerolinea.TrTELEFONO (ncodpasajero,ntelefono)values(" + icodigoPasajero + "," + stelefono[itelefono] +  ");";
+                            MySqlCommand cmd3 = new MySqlCommand(sinsertartelefono1, clasconexion.funobtenerConexion());
+                            cmd3.ExecuteNonQuery();
+                        }
+                        
+                    
 
                    
                     if (!string.IsNullOrWhiteSpace(lstCorreoPasajero.Text))
@@ -347,11 +344,16 @@ namespace Aerolinea
             funllenarComboAdicionalesPasajero();
         }
 
-      
-
+        private int icontadorTelefonosPasajeros=0;
+        private int[] stelefono = new int[50];
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            
+            
+           
             lstTelefonoPasajero.Items.Add(txtTelefonoPasajero.Text);
+            stelefono[icontadorTelefonosPasajeros] = Convert.ToInt32(txtTelefonoPasajero.Text);                
+            icontadorTelefonosPasajeros++;
             txtTelefonoPasajero.Text = "";
 
         }
