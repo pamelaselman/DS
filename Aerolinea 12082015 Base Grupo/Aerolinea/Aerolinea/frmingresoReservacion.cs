@@ -128,7 +128,7 @@ namespace Aerolinea
 
         public void btnReservar_Click(object sender, EventArgs e)
         {
-            MySqlConnection conectar = new MySqlConnection("server=localhost;userid=root;password=negritalinda ;database=aerolinea");
+           // MySqlConnection conectar = new MySqlConnection("server=localhost;userid=root;password=negritalinda ;database=aerolinea");
             string svalorSeleccionado = CbSeleccionCodigo.SelectedValue.ToString();
             ds = new DataSet();
             dt = ds.Tables.Add();
