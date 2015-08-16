@@ -94,3 +94,4 @@ C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea 12082015 Base
 C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea 12082015 Base Grupo\Aerolinea\Aerolinea\bin\Debug\Aerolinea.pdb
 C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea 12082015 Base Grupo\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmcontrolUsuarios.resources
 C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea 12082015 Base Grupo\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmmodificarUsuario.resources
+C:\Users\pamel_000\Documents\Visual Studio 2013\Projects\Aerolinea 12082015 Base Grupo\Aerolinea\Aerolinea\obj\Debug\Aerolinea.frmmodificarPasajero.resources

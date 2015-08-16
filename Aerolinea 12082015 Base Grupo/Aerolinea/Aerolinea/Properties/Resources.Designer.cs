@@ -133,6 +133,16 @@ namespace Aerolinea.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_correo1 {
+            get {
+                object obj = ResourceManager.GetObject("agregar correo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_usuario {
             get {
                 object obj = ResourceManager.GetObject("agregar usuario", resourceCulture);
@@ -236,6 +246,16 @@ namespace Aerolinea.Properties {
         internal static System.Drawing.Bitmap eliminar_correo {
             get {
                 object obj = ResourceManager.GetObject("eliminar correo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eliminar_correo1 {
+            get {
+                object obj = ResourceManager.GetObject("eliminar correo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -396,6 +416,16 @@ namespace Aerolinea.Properties {
         internal static System.Drawing.Bitmap modificar_correo {
             get {
                 object obj = ResourceManager.GetObject("modificar correo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modificar_correo1 {
+            get {
+                object obj = ResourceManager.GetObject("modificar correo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

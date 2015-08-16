@@ -102,6 +102,9 @@
             // 
             this.cmbSeleccionartipoModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSeleccionartipoModificar.FormattingEnabled = true;
+            this.cmbSeleccionartipoModificar.Items.AddRange(new object[] {
+            "ACTIVO",
+            "INACTIVO"});
             this.cmbSeleccionartipoModificar.Location = new System.Drawing.Point(110, 222);
             this.cmbSeleccionartipoModificar.Name = "cmbSeleccionartipoModificar";
             this.cmbSeleccionartipoModificar.Size = new System.Drawing.Size(100, 24);
@@ -206,7 +209,7 @@
             this.sALIRToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(482, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(480, 27);
             this.menuStrip1.TabIndex = 182;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -267,15 +270,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 384);
+            this.ClientSize = new System.Drawing.Size(480, 384);
             this.ControlBox = false;
             this.Controls.Add(this.grpbusquedaModificar);
             this.Controls.Add(this.btnBuscarUsuario);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnGuardarUsuario);
             this.Controls.Add(this.groupBoxDatosUsuario);
-            this.MaximumSize = new System.Drawing.Size(498, 423);
-            this.MinimumSize = new System.Drawing.Size(498, 423);
+            this.MaximumSize = new System.Drawing.Size(496, 423);
+            this.MinimumSize = new System.Drawing.Size(496, 423);
             this.Name = "frmmodificarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Usuario";
